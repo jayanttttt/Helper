@@ -5,7 +5,7 @@ import CreateAccount from './components/CreateAccount';
 import {
   HashRouter as Router,
   Routes,
-  Route,
+  Route
 } from "react-router-dom";
 
 function App() {
