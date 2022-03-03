@@ -19,8 +19,8 @@ function Home() {
             <button className="create_acc">Create Account</button>
           </Link>
         </div>
-        <p className="page_end">Take breath and feel calm</p>
       </div>
+      <p className="page_end">Take breath and feel calm</p>
     </div>
   );
 }
