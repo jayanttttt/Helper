@@ -58,14 +58,14 @@ img {
   text-align: left;
   font-family: Work Sans;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 700;
   font-size: 15px;
   line-height: 18px;
   display: flex;
   align-items: center;
   letter-spacing: 0.06em;
   text-transform: capitalize;
-  color: rgba(111, 111, 111, 0.6);
+  color: rgba(111, 111, 111, 1);
   padding: 0px 0px 6px 8px;
   width: 86vw;
   max-width: 360px;
