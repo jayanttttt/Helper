@@ -1,4 +1,9 @@
 .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
   animation-name: show;
   animation-duration: 600ms;
   animation-timing-function: ease;
@@ -31,8 +36,7 @@ img {
   padding-right: 6vw;
 }
 .text_main {
-  transform: translateY(152px);
-  margin-top: 50px;
+  margin-top: 80px;
   font-family: Work Sans;
   font-style: normal;
   font-weight: normal;
@@ -44,7 +48,6 @@ img {
   float: left;
 }
 .input_field {
-  transform: translateY(152px);
   margin-top: 14px;
   float: left;
 }
@@ -65,8 +68,8 @@ img {
   color: rgba(111, 111, 111, 0.6);
   padding: 0px 0px 6px 8px;
   width: 86vw;
-  max-width: 340px;
-  margin-top: 18px;
+  max-width: 360px;
+  margin-top: 24px;
 }
 .for_pas {
   outline: 0;
@@ -87,31 +90,31 @@ img {
   padding: 0px 0px 6px 8px;
   width: 86vw;
   max-width: 340px;
-  margin-top: 18px;
+  margin-top: 28px;
 }
-.inputs::placeholder{
-    color: rgba(111, 111, 111, 0.5);
+.inputs::placeholder {
+  color: rgba(111, 111, 111, 0.5);
 }
-.btn_text{
-    background: #A6F4C5;
-    border-radius: 10px;
-    width: 228px;
-    height: 52px;
-    outline: 0;
-    justify-content: center;
-    border: 0px;
-    font-family: Work Sans;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: #1E1D1D;
-    float: right;
-    margin-top: 36px;
-    cursor: pointer;
+.btn_text {
+  background: #a6f4c5;
+  border-radius: 10px;
+  width: 228px;
+  height: 52px;
+  outline: 0;
+  justify-content: center;
+  border: 0px;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1e1d1d;
+  float: right;
+  margin-top: 50px;
+  cursor: pointer;
 }

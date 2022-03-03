@@ -10,11 +10,13 @@
   width: 100vw;
   justify-content: center;
 }
+.container_main {
+  height: 495px;
+}
 .title_name {
   font-family: "arial_rounded_mt_boldregular";
   font-size: 36px;
   line-height: 42px;
-  margin-top: 60px;
   letter-spacing: -0.333333px;
   font-feature-settings: "pnum" on, "lnum" on;
   color: #000000;
