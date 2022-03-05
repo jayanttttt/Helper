@@ -1,9 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import pic1 from "../images/Pic1.png";
 import "./SignIn.css";
 
 function SignIn() {
+  const history = useNavigate();
+  function handleSubmit() {
+    history("/feedhome");
+  }
+
   return (
     <div className="box">
       <Link to="/">
@@ -18,7 +23,7 @@ function SignIn() {
         <div className="input_box">
           <p className="text_main">Sign In</p>
           <div className="input_field">
-            <form>
+            <form onSubmit={handleSubmit}>
               <input
                 type="email"
                 placeholder="Email"

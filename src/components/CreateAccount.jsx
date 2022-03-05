@@ -1,8 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import pic1 from "../images/Pic1.png";
 
 function CreateAccount() {
+  const history = useNavigate();
+  function handleSubmit() {
+    history("/feedhome");
+  }
+
   return (
     <div className="box">
       <Link to="/">
@@ -17,7 +22,7 @@ function CreateAccount() {
         <div className="input_box">
           <p className="text_main">Create Account</p>
           <div className="input_field">
-            <form>
+            <form onSubmit={handleSubmit}>
               <input
                 type="name"
                 placeholder="Name"
