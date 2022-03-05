@@ -1,17 +1,19 @@
 import React from "react";
+import "./Header.css";
+import alert from "../images/alert.png";
 
 function Header() {
   return (
     <>
-      <div>
-        <div>
+      <div className="header_container_main">
+        <div className="header_main">
           <div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div className="menu"></div>
+            <div className="menu"></div>
+            <div className="menu"></div>
           </div>
-          <p></p>
-          <img src="" alt="" />
+          <p className="header_text">Helper</p>
+          <img src={alert} alt="icon" />
         </div>
       </div>
     </>

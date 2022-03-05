@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css";
+import "./Home.css";
 import "../fonts/webfontkit-20220222-050347/stylesheet.css";
 import "../fonts/webfontkit-20220222-060404/stylesheet.css";
 import { Link } from "react-router-dom";
