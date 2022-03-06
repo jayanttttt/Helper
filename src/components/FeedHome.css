@@ -1,0 +1,66 @@
+.feedhome_text_main {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.011em;
+  color: #333333;
+  padding: 21px 10vw 16px 10vw;
+}
+.slider_container_main {
+  overflow-x: auto;
+}
+.slider_container_main::-webkit-scrollbar {
+  display: none;
+}
+.slider_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 8vw 3px 8vw;
+  text-align: center;
+  width: 100vw;
+}
+.feeling_container {
+  padding: 10px;
+}
+.feeling_container_active {
+  padding: 10px;
+  background: #a6f4c5;
+  border-radius: 8px;
+}
+.slider_text_main {
+  font-family: poppinslight;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  text-transform: capitalize;
+  color: #1e1d1d;
+}
+.text_input {
+  width: 72vw;
+  height: 135px;
+  margin: 0px 10vw;
+  padding: 11px 14px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.011em;
+  color: #000000;
+}
+.text_input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.011em;
+  color: #000000;
+  opacity: 0.4;
+}

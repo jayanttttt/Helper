@@ -15,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  padding: 0px 6vw 0px 6vw;
+  padding: 0px 10vw 0px 10vw;
   align-items: baseline;
   z-index: 100;
 }

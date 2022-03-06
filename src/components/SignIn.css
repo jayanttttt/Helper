@@ -22,9 +22,10 @@
 .back_img {
   position: absolute;
   top: 26px;
-  left: 2vw;
+  left: 6vw;
   width: 40px;
   height: 40px;
+  text-align: center;
 }
 .back_img > img {
   width: 20px;
@@ -32,8 +33,8 @@
 .input_box {
   position: relative;
   max-width: 400px;
-  padding-left: 6vw;
-  padding-right: 6vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
 }
 .text_main {
   margin-top: 80px;
@@ -50,6 +51,8 @@
 .input_field {
   margin-top: 14px;
   float: left;
+  width: 80vw;
+  max-width: 370px;
 }
 .inputs {
   outline: 0;
@@ -67,7 +70,7 @@
   text-transform: capitalize;
   color: rgba(111, 111, 111, 1);
   padding: 0px 0px 6px 8px;
-  width: 86vw;
+  width: 78vw;
   max-width: 360px;
   margin-top: 24px;
 }
