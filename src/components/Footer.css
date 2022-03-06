@@ -1,0 +1,21 @@
+.footer_container_main {
+  position: absolute;
+  bottom: 0px;
+  width: 100vw;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.33);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  border-radius: 10px 10px 0px 0px;
+}
+.footer_main {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 0px 6vw 0px 6vw;
+  align-items: baseline;
+  z-index: 100;
+}
