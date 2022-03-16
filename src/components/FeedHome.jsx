@@ -6,8 +6,17 @@ import "./FeedHome.css";
 function FeedHome(props) {
   const { feels } = props;
   const [currentSelected, setCurrentSelected] = useState();
+  const [hidden, setHidden] = useState(false);
   function handleSelect(feel) {
     setCurrentSelected(feel);
+  }
+  function handleFocus() {
+    setHidden(true);
+  }
+  function handleBlur() {
+    setTimeout(() => {
+      setHidden(false);
+    }, 100);
   }
 
   return (
@@ -35,8 +44,16 @@ function FeedHome(props) {
         </div>
       </div>
       <p className="feedhome_text_main">What makes you feel like this?</p>
-      <textarea placeholder="Share whatever that is disturbing you..." className="text_input" />
-      <Footer />
+      <form className="feedhome_form">
+        <textarea
+          placeholder="Share whatever that is disturbing you..."
+          className="text_input"
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+        />
+        <button className="feedhome_button">SEEK HELP</button>
+      </form>
+      {hidden ? "" : <Footer />}
     </>
   );
 }

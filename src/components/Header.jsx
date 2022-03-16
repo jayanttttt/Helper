@@ -7,11 +7,6 @@ function Header() {
     <>
       <div className="header_container_main">
         <div className="header_main">
-          <div>
-            <div className="menu"></div>
-            <div className="menu"></div>
-            <div className="menu"></div>
-          </div>
           <p className="header_text">Helper</p>
           <img src={alert} alt="icon" />
         </div>

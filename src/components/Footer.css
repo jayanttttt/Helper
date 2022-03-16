@@ -15,7 +15,47 @@
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  padding: 0px 10vw 0px 10vw;
+  padding: 6px 10vw 0px 10vw;
   align-items: baseline;
   z-index: 100;
+}
+.slider {
+  position: absolute;
+  background: #3a9fe9;
+  width: 50px;
+  height: 2px;
+  top: 52px;
+  left: 8%;
+  border-radius: 30px;
+  transition: all 500ms ease;
+}
+input[type="radio"] {
+  display: none;
+}
+.footer_main > label > div > img {
+  opacity: 0.6;
+}
+#home:checked ~ div .slider {
+  left: 8%;
+}
+#home:checked ~ div label div #img1 {
+  opacity: 1;
+}
+#search:checked ~ div .slider {
+  left: 31%;
+}
+#search:checked ~ div label div #img2 {
+  opacity: 1;
+}
+#message:checked ~ div .slider {
+  left: 55%;
+}
+#message:checked ~ div label div #img3 {
+  opacity: 1;
+}
+#profile:checked ~ div .slider {
+  left: 78.5%;
+}
+#profile:checked ~ div label div #img4 {
+  opacity: 1;
 }
