@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import AddPost from "./AddPost";
@@ -67,7 +67,7 @@ function FeedHome(props) {
       </div>
       <div className="help_pannel_main">
         <div className="help_pannel_top">
-          <p className="help_pannel_text1">People Seeking Help</p>
+          <p className="help_pannel_text1">All Post</p>
           <p className="help_pannel_text2">View All</p>
         </div>
         <Posts posts={posts} handleClick={handleClick} />

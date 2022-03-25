@@ -142,7 +142,7 @@
 .relaxing_mantra_main {
   background: #edf7ff;
   border-radius: 14px;
-  height: 260px;
+  height: 280px;
 }
 .relaxing_mantra_text {
   display: flex;
@@ -166,8 +166,8 @@
   color: #65e0a2;
 }
 .relaxing_mantra_img {
-  padding: 0px 4vw;
-  width: 344px;
+  padding: 0px 6vw;
+  width: 88vw;
 }
 .help_pannel_main {
   margin: 16px 6vw 0px 6vw;

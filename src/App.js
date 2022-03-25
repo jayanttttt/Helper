@@ -28,7 +28,7 @@ function App() {
       img: Pic8,
     },
     {
-      title: "Aree mori maiyaa",
+      title: "Feelin Good",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem a sagittis platea et. Nam lectus cras magnis ut vivamus. Urna eu eget eget interdum id. Massa, blandit dictum amet dui magna purus gravida vel id. Feugiat arcu nec justo sagittis tristique turpis aenean rhoncus, facilisis. Id ultrices facilisis facilisi scelerisque neque, cras id tortor. Egestas ipsum eget eget aliquam amet pellentesque proin elementum egestas. Semper mattis et etiam velit. Curabitur cursus lectus amet, quisque aenean vel posuere nunc. Viverra magna vel condimentum diam quis nunc vel. Pharetra scelerisque aliquam elementum pellentesque amet, fringilla sapien tristique nullam. Vitae quam felis nibh mauris ultrices nulla aenean posuere vitae. Felis elit eleifend pharetra, malesuada turpis amet imperdiet amet. Consectetur turpis aliquet amet, lectus leo volutpat tempus cursus ullamcorper.",
       id: 0,
@@ -79,6 +79,7 @@ function App() {
   }
   function handleHidden() {
     setHidden(false);
+    setCurrentSelected();
   }
   const [currentSelected, setCurrentSelected] = useState();
   function handleSelect(feel) {
@@ -115,6 +116,7 @@ function App() {
       id: currentPost.id,
       img: currentPost.img,
     };
+    setCurrentSelected();
     setPosts(newEditedPosts);
   }
 
