@@ -1,12 +1,13 @@
 .footer_container_main {
-  position: absolute;
+  position: sticky;
   bottom: 0px;
+  z-index: 10;
   width: 100vw;
   height: 56px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.33);
+  background: rgba(255, 255, 255, 1);
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   border-radius: 10px 10px 0px 0px;

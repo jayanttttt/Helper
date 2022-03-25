@@ -1,30 +1,29 @@
 import React, { useState } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
+import AddPost from "./AddPost";
+import Posts from "./Posts";
 import "./FeedHome.css";
+import Pic7 from "../images/Pic7.png";
 
 function FeedHome(props) {
-  const { feels } = props;
-  const [currentSelected, setCurrentSelected] = useState();
-  const [hidden, setHidden] = useState(false);
-  function handleSelect(feel) {
-    setCurrentSelected(feel);
-  }
-  function handleFocus() {
-    setHidden(true);
-  }
-  function handleBlur() {
-    setTimeout(() => {
-      setHidden(false);
-    }, 100);
-  }
+  const {
+    feels,
+    handleNewPost,
+    posts,
+    hidden,
+    handleHidden,
+    currentSelected,
+    handleSelect,
+    handleLeave,
+    handleClick,
+  } = props;
 
   return (
     <>
       <Header />
-      <p className="feedhome_text_main">
-        Hi Rohan ! How are you feeling today ?
-      </p>
+      <p className="feedhome_text_head">Hi Rohan 👋</p>
+      <p className="feedhome_text_main">How are you feeling today ?</p>
       <div className="slider_container_main">
         <div className="slider_container">
           {feels.map((feel) => (
@@ -43,17 +42,37 @@ function FeedHome(props) {
           ))}
         </div>
       </div>
-      <p className="feedhome_text_main">What makes you feel like this?</p>
-      <form className="feedhome_form">
-        <textarea
-          placeholder="Share whatever that is disturbing you..."
-          className="text_input"
-          onFocus={handleFocus}
-          onBlur={handleBlur}
-        />
-        <button className="feedhome_button">SEEK HELP</button>
-      </form>
-      {hidden ? "" : <Footer />}
+      {currentSelected ? (
+        <div className="feedhome_share_main">
+          <div className="feedhome_share_text">
+            <p>Please share your feeling with us and feel&nbsp;</p>
+            <p className="green">calm</p>
+          </div>
+          <button onClick={handleHidden}>Share your feelings</button>
+        </div>
+      ) : (
+        ""
+      )}
+      {hidden ? (
+        ""
+      ) : (
+        <AddPost handleNewPost={handleNewPost} handleLeave={handleLeave} />
+      )}
+      <div className="relaxing_mantra_main">
+        <div className="relaxing_mantra_text">
+          <p className="relaxing_mantra_text_black">Relaxing&nbsp;</p>
+          <p className="relaxing_mantra_text_green">Mantra</p>
+        </div>
+        <img src={Pic7} alt="img" className="relaxing_mantra_img" />
+      </div>
+      <div className="help_pannel_main">
+        <div className="help_pannel_top">
+          <p className="help_pannel_text1">People Seeking Help</p>
+          <p className="help_pannel_text2">View All</p>
+        </div>
+        <Posts posts={posts} handleClick={handleClick} />
+      </div>
+      <Footer />
     </>
   );
 }
