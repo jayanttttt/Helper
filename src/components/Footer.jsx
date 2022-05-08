@@ -5,7 +5,7 @@ import Group3 from "../images/Group3.png";
 import Group4 from "../images/Group4.png";
 import "./Footer.css";
 
-function Footer() {
+function Footer({ handleHome, handleSearch, handleActivity, handleProfile }) {
   return (
     <>
       <div className="footer_container_main">
@@ -14,22 +14,22 @@ function Footer() {
         <input type="radio" name="slider" id="message" />
         <input type="radio" name="slider" id="profile" />
         <div className="footer_main">
-          <label htmlFor="home">
+          <label htmlFor="home" onClick={handleHome}>
             <div>
               <img src={Group1} alt="icon" id="img1" />
             </div>
           </label>
-          <label htmlFor="search">
+          <label htmlFor="search" onClick={handleSearch}>
             <div>
               <img src={Group2} alt="icon" id="img2" />
             </div>
           </label>
-          <label htmlFor="message">
+          <label htmlFor="message" onClick={handleActivity}>
             <div>
               <img src={Group3} alt="icon" id="img3" />
             </div>
           </label>
-          <label htmlFor="profile">
+          <label htmlFor="profile" onClick={handleProfile}>
             <div>
               <img src={Group4} alt="icon" id="img4" />
             </div>
