@@ -5,6 +5,9 @@ import AddPost from "./AddPost";
 import Posts from "./Posts";
 import "./FeedHome.css";
 import Pic7 from "../images/Pic7.png";
+import Pic1 from "../images/Pic1.png";
+import Pic9 from "../images/Pic9.svg";
+import Pic10 from "../images/Pic10.svg";
 
 function FeedHome(props) {
   const {
@@ -46,6 +49,14 @@ function FeedHome(props) {
     setSearch(false);
     setActivity(false);
     setProfile(true);
+  };
+
+  const [image, setImage] = useState(true);
+  const handleLeft = () => {
+    setImage(true);
+  };
+  const handleRight = () => {
+    setImage(false);
   };
 
   return (
@@ -109,21 +120,89 @@ function FeedHome(props) {
       )}
       {search ? (
         <>
-          <h1>Search</h1>
+          <div style={{ minHeight: "84vh" }}>
+            <div>
+              <div style={{ padding: "16px 16px" }}>
+                <img src={Pic1} alt="" />
+              </div>
+              <div style={{ padding: "0px 16px" }}>
+                <input
+                  type="text"
+                  placeholder="Search"
+                  style={{
+                    padding: "0px 10px",
+                    width: "93%",
+                    height: "40px",
+                    fontFamily: "poppinslight",
+                    fontWeight: "900",
+                    outline: "none",
+                    fontSize: "16px",
+                    borderRadius: "6px",
+                    border: "2px solid #3a9fe9",
+                  }}
+                />
+              </div>
+            </div>
+            <p
+              style={{
+                transform: "translate(0vw, 24vh)",
+                fontFamily: "poppinslight",
+                fontWeight: 900,
+                fontSize: "36px",
+                lineHeight: "54px",
+                color: "rgba(50, 78, 126, 0.62)",
+                textAlign: "center",
+              }}
+            >
+              explore helpers <br /> near you
+            </p>
+          </div>
         </>
       ) : (
         ""
       )}
       {activity ? (
         <>
-          <h1>Activity</h1>
+          <h1 style={{ minHeight: "84vh" }}>Activity</h1>
         </>
       ) : (
         ""
       )}
       {profile ? (
         <>
-          <h1>Profile</h1>
+          <div style={{ minHeight: "84vh" }}>
+            {image ? (
+              <img src={Pic9} alt="" style={{ paddingTop: "20px" }} />
+            ) : (
+              <img src={Pic10} alt="" style={{ paddingTop: "20px" }} />
+            )}
+            <div
+              style={{
+                display: "flex",
+                width: "100%",
+                position: "absolute",
+                top: "262px",
+                opacity: "0",
+              }}
+            >
+              <div style={{ width: "50%" }}>
+                <button
+                  style={{ width: "100%", padding: "20px" }}
+                  onClick={handleLeft}
+                >
+                  Left
+                </button>
+              </div>
+              <div style={{ width: "50%" }}>
+                <button
+                  style={{ width: "100%", padding: "20px" }}
+                  onClick={handleRight}
+                >
+                  Right
+                </button>
+              </div>
+            </div>
+          </div>
         </>
       ) : (
         ""
