@@ -12,6 +12,7 @@ function FullPost(props) {
     handleDeletePost,
   } = props;
   const height = document.getElementById("root").scrollHeight;
+  const name = localStorage.getItem("user_name");
   return (
     <>
       {deletebox ? (
@@ -49,7 +50,7 @@ function FullPost(props) {
           <pre className="post_desc_text">{currentPost.description}</pre>
           <div className="post_author_box">
             <p className="author_text">by</p>
-            <p className="author_name">&nbsp;man from earth&nbsp;</p>
+            <p className="author_name">&nbsp;{name}&nbsp;</p>
             <p className="author_text">| 23rd december, 2020</p>
           </div>
           <div className="post_button">

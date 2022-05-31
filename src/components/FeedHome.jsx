@@ -6,8 +6,9 @@ import Posts from "./Posts";
 import "./FeedHome.css";
 import Pic7 from "../images/Pic7.png";
 import Pic1 from "../images/Pic1.png";
-import Pic9 from "../images/Pic9.svg";
-import Pic10 from "../images/Pic10.svg";
+import Pic9 from "../images/Pic9.png";
+import Pic10 from "../images/Pic10.png";
+import unsplash from "../images/unsplash_s0JxkTsSGyA.png";
 
 function FeedHome(props) {
   const {
@@ -51,20 +52,15 @@ function FeedHome(props) {
     setProfile(true);
   };
 
-  const [image, setImage] = useState(true);
-  const handleLeft = () => {
-    setImage(true);
-  };
-  const handleRight = () => {
-    setImage(false);
-  };
+  const name = localStorage.getItem("user_name");
+  const [tab, setTab] = useState(true);
 
   return (
     <>
       <Header />
       {home ? (
         <>
-          <p className="feedhome_text_head">Hi Rohan 👋</p>
+          <p className="feedhome_text_head">Hi {name} 👋</p>
           <p className="feedhome_text_main">How are you feeling today ?</p>
           <div className="slider_container_main">
             <div className="slider_container">
@@ -105,7 +101,17 @@ function FeedHome(props) {
               <p className="relaxing_mantra_text_black">Relaxing&nbsp;</p>
               <p className="relaxing_mantra_text_green">Mantra</p>
             </div>
-            <img src={Pic7} alt="img" className="relaxing_mantra_img" />
+            {/* <img src={Pic7} alt="img" className="relaxing_mantra_img" /> */}
+            <iframe
+              className="relaxing_mantra_img"
+              width="560"
+              height="200"
+              src="https://www.youtube.com/embed/yfUdn8AtwSw"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
           <div className="help_pannel_main">
             <div className="help_pannel_top">
@@ -163,45 +169,70 @@ function FeedHome(props) {
       )}
       {activity ? (
         <>
-          <h1 style={{ minHeight: "84vh" }}>Activity</h1>
+          <div style={{ minHeight: "84vh" }}>
+            <p className="profile_text" style={{ margin: "14px 22.5px" }}>
+              Activity
+            </p>
+          </div>
         </>
       ) : (
         ""
       )}
       {profile ? (
         <>
-          <div style={{ minHeight: "84vh" }}>
-            {image ? (
-              <img src={Pic9} alt="" style={{ paddingTop: "20px" }} />
-            ) : (
-              <img src={Pic10} alt="" style={{ paddingTop: "20px" }} />
-            )}
-            <div
+          <div
+            style={{
+              minHeight: "84vh",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={unsplash}
+              alt=""
               style={{
-                display: "flex",
-                width: "100%",
-                position: "absolute",
-                top: "262px",
-                opacity: "0",
+                height: "72px",
+                width: "72px",
+                marginTop: "40px",
+                marginBottom: "12px",
+              }}
+            />
+            <p
+              className="profile_text"
+              style={{
+                marginBottom: "12px",
               }}
             >
-              <div style={{ width: "50%" }}>
-                <button
-                  style={{ width: "100%", padding: "20px" }}
-                  onClick={handleLeft}
-                >
-                  Left
-                </button>
-              </div>
-              <div style={{ width: "50%" }}>
-                <button
-                  style={{ width: "100%", padding: "20px" }}
-                  onClick={handleRight}
-                >
-                  Right
-                </button>
-              </div>
+              {name}, 26
+            </p>
+            <p
+              className="profile_text_2"
+              style={{
+                marginBottom: "18px",
+              }}
+            >
+              Joined the platform on 24th July, 2021
+            </p>
+            <div style={{ display: "flex" }}>
+              <p
+                className={tab ? "profile_text_3_active" : "profile_text_4"}
+                onClick={() => setTab(true)}
+              >
+                Help Taken
+              </p>
+              <p
+                className={!tab ? "profile_text_3_active" : "profile_text_3"}
+                onClick={() => setTab(false)}
+              >
+                Help Given
+              </p>
             </div>
+            {tab ? (
+              <img src={Pic9} alt="" style={{ width: "100%" }} />
+            ) : (
+              <img src={Pic10} alt="" style={{ marginTop: "90px" }} />
+            )}
           </div>
         </>
       ) : (

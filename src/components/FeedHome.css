@@ -197,3 +197,58 @@
   text-decoration-line: underline;
   color: #1e1d1d;
 }
+.profile_text {
+  font-family: "poppinslight";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -0.333333px;
+}
+.profile_text_2 {
+  font-family: "poppinslight";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.333333px;
+  color: rgba(0, 0, 0, 0.5);
+  opacity: 0.6;
+}
+.profile_text_3_active {
+  font-family: "poppinslight";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.333333px;
+  border-bottom: 4px solid #3a9fe9;
+  width: 50vw;
+  text-align: center;
+  padding: 16px 0px;
+}
+.profile_text_3 {
+  font-family: "poppinslight";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.333333px;
+  width: 50vw;
+  text-align: center;
+  color: #737373;
+  padding: 16px 0px;
+}
+.profile_text_4 {
+  font-family: "poppinslight";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.333333px;
+  width: 50vw;
+  text-align: center;
+  color: #737373;
+  padding: 16px 0px;
+  border-bottom: 1px solid #e0e0e0;
+}

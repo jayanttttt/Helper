@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import pic1 from "../images/Pic1.png";
 
 function CreateAccount() {
+  const [name, setName] = useState("");
+
   const history = useNavigate();
   function handleSubmit() {
     history("/feedhome");
   }
+
+  localStorage.setItem("user_name", name);
 
   return (
     <div className="box">
@@ -28,6 +32,7 @@ function CreateAccount() {
                 placeholder="Name"
                 className="inputs"
                 required
+                onChange={(e) => setName(e.target.value)}
               />
               <input
                 type="email"
