@@ -4,12 +4,13 @@ import "./AddPost.css";
 function AddPost(props) {
   const { handleNewPost, handleLeave } = props;
   const height = document.getElementById("root").scrollHeight;
+  const name = localStorage.getItem("user_name");
   return (
     <>
       <div style={{ height: height }} className="add_post_main">
         <div className="add_post_box" onMouseLeave={handleLeave}>
           <div className="add_post_image_box">
-            <p>Hi Rohan, I see feeling worried ?</p>
+            <p>Hi {name}, I see feeling worried ?</p>
             <p>Please let us know about it.</p>
           </div>
           <p className="edit_text_main">Title</p>
