@@ -1,0 +1,19 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "web",
+      "site": "https://helper-six.vercel.app/"
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "xyz.appmaker.pjdfbl",
+      "sha256_cert_fingerprints": [
+        "17:79:9A:9B:57:E3:1C:22:9F:1C:23:8A:CF:3A:5B:FB:87:FC:0C:06:3E:9F:90:50:97:43:64:63:61:3F:4A:8C"
+      ]
+    }
+  }
+]
